@@ -4,9 +4,10 @@ const containerBox = document.querySelector("#container");
 function createDivs (){
     let divbox = document.createElement("div");
     containerBox.appendChild(divbox);
+    divbox.classList.add("boxes");
 }
 
-for (i=0; i<16; i++) {
+for (i=0; i<256; i++) {
 createDivs();
 }
 
