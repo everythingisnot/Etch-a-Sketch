@@ -1,5 +1,7 @@
 
-const containerBox = document.querySelector("#container");
+const containerBox = document.querySelector(".container");
+let button = document.createElement("button");
+
 
 function createDivs (){
     let divbox = document.createElement("div");
@@ -7,13 +9,11 @@ function createDivs (){
     divbox.classList.add("boxes");
 }
 
-for (i=0; i<256; i++) {
+for (i=0; i<900; i++) {
 createDivs();
 }
-
-//div1.classList.add("boxes");
-//div2.classList.add("boxes");
-//div3.classList.add("boxes");
-
-
+let numBoxes;
+function newgrid () {
+  numBoxes = prompt ("Enter # of boxes per side"," ");
+}
 

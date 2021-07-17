@@ -1,13 +1,18 @@
-#container {
-font-size: 40px;    
-text-align: center;        
-margin: 30px;
-    
+.container {
+display: grid;
+padding: 0;
+grid-template-columns: repeat(30, 1fr);
+grid-template-rows: repeat(30, 1fr);
+gap: 2px;
+margin: none;
+   
 }
+
 .boxes {
-display: inline-block;
 background-color: black;
-width: 100px;
-height: 100px;
-margin: 5px;
 }
+
+
+.boxes:hover {
+    background-color: rgb(194, 243, 250);
+    }
