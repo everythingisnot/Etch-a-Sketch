@@ -1,19 +1,24 @@
 
+let numBoxes;
 const containerBox = document.querySelector(".container");
-let button = document.createElement("button");
+function newGrid (){
+numBoxes = parseInt(prompt ("Enter grid width in # of boxes"));
+totalBoxes = numBoxes * numBoxes;  
+containerBox.style.gridTemplateColumns = "repeat("+numBoxes+", 1fr)";
+containerBox.style.gridTemplateRows = "repeat("+numBoxes+", 1fr)";
 
-
+for (i=0; i<totalBoxes; i++) {
+    createDivs();
+    }
+}
+//document.documentElement.style.setProperty("--dynamic-grid-size", numBoxes);
 function createDivs (){
     let divbox = document.createElement("div");
     containerBox.appendChild(divbox);
     divbox.classList.add("boxes");
+    
 }
 
-for (i=0; i<900; i++) {
-createDivs();
-}
-let numBoxes;
-function newgrid () {
-  numBoxes = prompt ("Enter # of boxes per side"," ");
-}
+
+
 
